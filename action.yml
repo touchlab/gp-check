@@ -1,17 +1,14 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'GitPortalCheckChanges'
+description: 'Verify no local KMP changes'
+author: 'Touchlab'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  sshPrivateKey:
+    description: 'Private SSH key to register in the SSH agent'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  kmpModules:
+    description: 'List of KMP modules to monitor, comma separated'
+    required: true
+
 runs:
   using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
-
+  image: 'docker://kpgalligan/gitportal:latest'
