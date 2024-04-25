@@ -9,5 +9,8 @@ eval $(ssh-agent)
 
 cd /github/workspace
 
+git config --global user.email "kgalligan@gmail.com"
+git config --global user.name "Kevin Galligan"
+
 echo "Running: java -jar /core.jar check -m $1 -l info"
 java -jar /core.jar check -m $1 -l info
