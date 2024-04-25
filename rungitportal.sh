@@ -9,4 +9,5 @@ eval $(ssh-agent)
 
 cd /github/workspace
 
-java -jar /core.jar check -m $1
+echo "Running: java -jar /core.jar check -m $1 -l info"
+java -jar /core.jar check -m $1 -l info
