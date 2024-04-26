@@ -12,4 +12,4 @@ cd /github/workspace
 git config --global user.email "info@touchlab.co"
 git config --global user.name "Checking Git"
 
-java -jar /core.jar check -m $1
+java -jar /core.jar check $1
