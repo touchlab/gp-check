@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM kpgalligan/gitportal:latest
+FROM kpgalligan/gitportal:bidir
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY rungitportal.sh /rungitportal.sh
