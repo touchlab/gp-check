@@ -12,3 +12,5 @@ git config --global user.email "info@touchlab.co"
 git config --global user.name "Checking Git"
 
 java -jar /core.jar autoci $1
+
+git push
