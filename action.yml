@@ -8,10 +8,13 @@ inputs:
   kmpModule:
     description: 'KMP module to check for changes'
     required: false
+  pullBranch:
+    description: 'OMG GitHub runs PR checks in a detached HEAD state'
+    required: false
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.kmpModule }}
-    - -pb ${{ github.event.pull_request.base.ref }}
+    - -pb ${{ inputs.pullBranch }}
