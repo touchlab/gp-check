@@ -14,3 +14,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.kmpModule }}
+    - -pb ${{ github.event.pull_request.base.ref }}
